@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Image Repository</title>
+    </head>
+
+    <body>
+        <h1>Welcome {{ username }}, to the Image Repository!</h1>
+        <br>
+        <a href="/">Home</a>
+        <a style="margin-left:2em" href="/logout">Log Out</a>
+        <br> <br>
+        <a href="/addImg">Add New Image</a>
+        <br> <br> <br>
+        <a href="/clearUserImages">Erase My Images</a>
+
+        <br> <br> <br>
+        <p>Welcome to the image repo!</p>
+        <br>
+
+        <table border = 1>
+            <thead>
+                <td>Name</td>
+                <td>Description</td>
+                <td>Contact Info</td>
+                <td>Price</td>
+                <td>Image</td>
+                <td></td>
+            </thead>
+            
+            {% for listing in listings %}
+                <tr>
+                <td>{{listing["name"]}}</td>
+                <td>{{listing["desc"]}}</td>
+                <td>{{listing["c_info"]}}</td>
+                <td>{{listing["price"]}}</td>
+                <td><img src='{{ listing["imgSrc"] }}' style="max-width: 270px;" /></td>
+                <td><a href='/remove/{{ listing["id"] }}'>Remove</button></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body>
+
+    <a href="/login">If you already have an account and want to login click here</a> <br>
+    
+    <p>{{ message }}</p>
+
+    <form action = "http://localhost:5000/register" method = "POST" 
+        enctype = "multipart/form-data">
+        <table border = 0>
+            <tr>
+            <td>Name: </td>
+            <td><input type = "text", id= "username", name ="username" > </td>
+            </tr>
+            <tr>
+            <td>Password: </td>
+            <td><input type = "password", id= "password", name ="password" > </td>
+            </tr>
+         </table>
+         <br> <br> <br>
+         <input type = "submit", value = "Sign Up"/>
+        
+    </form>  
+
+</body>
+</html>
+

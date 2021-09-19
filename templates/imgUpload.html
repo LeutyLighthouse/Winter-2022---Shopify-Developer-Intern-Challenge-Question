@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Image with ID</title>
+</head>
+<body>
+
+    <a href="/">Home</a> <br>
+    
+    <p>{{ message }}</p>
+
+    <form action = "http://localhost:5000/uploader" method = "POST" 
+        enctype = "multipart/form-data">
+        <table border = 0>
+            <tr>
+            <td>Name: </td>
+            <td><input type = "text", id= "image_name", name ="image_name" > </td>
+            </tr>
+            <tr>
+            <td>Description: </td>
+            <td><input type = "text", id= "desc", name ="desc" > </td>
+            </tr>
+            <tr>
+            <td>Contact Info: </td>
+            <td><input type = "text", id= "c_info", name ="c_info" > </td>
+            </tr>
+            <tr>
+            <td>Price: </td>
+            <td><input type="number" step="0.01", id="price", name="price"></td>
+            </tr>
+            <tr>
+            <td>Private?:</td>
+            <td><input type="checkbox", id="is_private", name="is_private", value="TRUE">
+            <input type="hidden", id="is_private_hidden", name="is_private", value="FALSE"></td>
+            </tr>
+         </table>
+         <br>
+         <input type = "file" name = "file" />
+         <br> <br> <br>
+         <input type = "submit", value = "Submit Image"/>
+        
+    </form>  
+
+</body>
+</html>
+
