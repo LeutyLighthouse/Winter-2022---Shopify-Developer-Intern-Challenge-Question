@@ -17,6 +17,7 @@ to remove all of their images all at once.
 - flask-sqlalchemy
 - flask-login
 - werkzeug
+- blinker
 
 The dependencies can be installed by simply typing:
 `pip install <dependency name>`
